@@ -1,0 +1,273 @@
+/* ==========================
+        RESET & BASE
+        ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #f5f2ed;
+  font-family: "poppins", serif;
+  line-height: 1.6;
+}
+
+/* ==========================
+        VARIÁVEIS
+        ========================== */
+:root {
+  --black-main: #0f0f0f;
+  --black-soft: #161616;
+
+  --white-main: #f5f2ed;
+
+  --gold-main: #c9a24d;
+  --gold-soft: #e1c77a;
+
+  --gray-light: #b8b8b8;
+  --gray-medium: #6e6e6e;
+}
+
+/* ==========================
+        HEADER / MENU
+        ========================== */
+header {
+  width: 100%;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #0f0f0f, transparent);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--gray-light);
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+  color: var(--gold-main);
+}
+
+.telefone-contato {
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  color: var(--gray-light);
+}
+
+/* ==========================
+        HERO
+        ========================== */
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  position: relative;
+}
+
+.hero img {
+  max-width: 180px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--gray-light);
+}
+
+.hero .btn-primario {
+  margin-top: 40px;
+}
+
+/* ==========================
+        BOTÕES
+        ========================== */
+.btn-primario {
+  background-color: var(--gold-main);
+  color: var(--black-main);
+  padding: 14px 40px;
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-primario:hover {
+  background-color: var(--gold-soft);
+}
+
+/* ==========================
+        SEÇÕES
+        ========================== */
+section {
+  padding: 100px 80px;
+}
+
+.titulo-secao {
+  text-align: center;
+  font-size: 32px;
+  color: var(--white-main);
+  margin-bottom: 60px;
+}
+
+/* ==========================
+        FOTOS
+        ========================== */
+.container-fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .container-fotos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container-fotos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.foto {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  margin: 0 auto;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.foto p {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  background: rgba(15, 15, 15, 0.75);
+  color: #f5f2ed;
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* ==========================
+        BOTÃO VER TODOS
+        ========================== */
+.btn-central {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* ==========================
+        TEXTO CENTRAL
+        ========================== */
+.texto-central {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.texto-central h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: var(--gold-main);
+}
+
+.texto-central p {
+  font-family: "poppins", sans-serif;
+  color: var(--gray-light);
+  font-size: 15px;
+}
+
+/* ==========================
+        RESERVE
+        ========================== */
+.reserve {
+  background: radial-gradient(circle at center, #1a1a1a, #0f0f0f);
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.reserve h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* ==========================
+        DIREITOS
+        ========================== */
+footer {
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #1f1f1f;
+}
+
+footer p {
+  font-family: "poppins", sans-serif;
+  font-size: 13px;
+  color: var(--gray-medium);
+}
+
+/* ==========================
+        RESPONSIVO
+        ========================== */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section {
+    padding: 80px 30px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
